@@ -1,0 +1,8 @@
+{
+	// https://nuxt.com/docs/guide/concepts/typescript
+	"compilerOptions": {
+		"forceConsistentCasingInFileNames": true,
+		"target": "ESNext"
+	},
+	"extends": "./.nuxt/tsconfig.json"
+}
