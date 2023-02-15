@@ -2,16 +2,16 @@
 	import { ref, provide } from 'vue'
 	import { Icon } from '@iconify/vue'
 	import { nanoid } from 'nanoid'
+	import { createStorage } from 'unstorage'
+
+	const storage = createStorage()
+	await storage.setItem('test:foo', { hello: 'world' })
 
 	const edit = ref(false)
 
 	const notes = useNotes()
 
 	provide('notes', notes)
-
-	function editNote() {
-		edit.value = !edit.value
-	}
 
 	function addNewNote() {
 		notes.value.push({
